@@ -67,6 +67,7 @@ First Page::  onPause
 First Page::  onStop
 
 And if you come back again same page only following callback happens.
+
 First Page::  onRestart
 
 First Page::  onStart
@@ -79,6 +80,7 @@ First Page::  onPause
 First Page::  onStop
 
 And come back again the same page then following callback happens.
+
 First Page::  onRestart
 
 First Page::  onStart
