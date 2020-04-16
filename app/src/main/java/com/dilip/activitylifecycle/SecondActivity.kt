@@ -15,8 +15,9 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
         setSupportActionBar(toolbar)
+        getSupportActionBar()?.setDisplayHomeAsUpEnabled(true);
 
-        var prev = findViewById<Button>(R.id.prev_page);
+        val prev = findViewById<Button>(R.id.prev_page);
         prev.setOnClickListener(){
             val startFirstPage = Intent(this,MainActivity::class.java)
             startActivity(startFirstPage);
@@ -65,9 +66,15 @@ class SecondActivity : AppCompatActivity() {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+        if (item.getItemId()==android.R.id.home) {
+            finish();
+            return true;
+        }
+
         return when (item.itemId) {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
         }
+
     }
 }

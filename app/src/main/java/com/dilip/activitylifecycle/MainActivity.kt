@@ -1,15 +1,16 @@
 package com.dilip.activitylifecycle
 
+
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
-
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,9 +18,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+        getSupportActionBar()?.setDisplayHomeAsUpEnabled(true);
 
-
-        var next = findViewById<Button>(R.id.next_page);
+        val next = findViewById<Button>(R.id.next_page);
         next.setOnClickListener(){
             val startSecondPage = Intent(this,SecondActivity::class.java)
             startActivity(startSecondPage);
@@ -68,6 +69,10 @@ class MainActivity : AppCompatActivity() {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+        if (item.getItemId()==android.R.id.home) {
+            finish();
+            return true;
+        }
         return when (item.itemId) {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)

@@ -12,6 +12,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
+            android:launchMode="singleInstance"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +23,7 @@
 
         <activity android:name=".SecondActivity"
             android:label="Second Page"
+            android:launchMode="singleInstance"
             android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
