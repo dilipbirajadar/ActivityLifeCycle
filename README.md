@@ -18,7 +18,7 @@ First Page::  onStart
 
 First Page::  onResume
 
-MainActivity - Responsible for executing Next Page click event and open the secon page callback for this page.
+MainActivity - Responsible for executing Next Page click event and open the second page callback for this page.
 
 # Once user click on the next button of first page following methods callback happens:
 First Page::  onPause
@@ -47,7 +47,7 @@ Second Page::  onStop
 
 Second Page::  onDestroy
 
-# Once user click on the prvious button of the second page instead of clicking back button.
+# Once user click on the previous button of the second page instead of clicking back button.
 Second Page::  onPause
 
 First Page::  onRestart
@@ -58,8 +58,9 @@ First Page::  onResume
 
 Second Page::  onStop
 
-Basically here second page is going into backstack so onDestroy method is not calling of second page if you see diffrence 
-of the back button click and previous button click.
+Second Page::  onDestroy
+
+
 
 # If you click on the Resume button of first page 
 First Page::  onPause
@@ -74,7 +75,7 @@ First Page::  onStart
 
 First Page::  onResume
 
-# If you click on the home buuton of the first page then following callback happens.
+# If you click on the home button of the first page then following callback happens.
 First Page::  onPause
 
 First Page::  onStop
@@ -87,7 +88,7 @@ First Page::  onStart
 
 First Page::  onResume
 
-# If you clcim the back button of the first page then folowing callback happens.
+# If you click the back button of the first page then following callback happens.
 First Page::  onPause
 
 First Page::  onStop
@@ -100,4 +101,4 @@ This app leverages android X.
 
 # For Test App
 Clone or Download from this repo.
-Open downlaoded project in android studio and just run.
+Open downloaded project in android studio and just run.
